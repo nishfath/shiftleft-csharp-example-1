@@ -38,6 +38,6 @@ jobs:
     - name: Build netfwWebapi
       run: msbuild netfwWebapi/netfwWebapi.sln
     - name: Analyze with inspect
-      run: .\sl analyze --app netfwWebapi --tag branch=$Env:GITHUB_REF --csharp netfwWebapi/netfwWebapi.sln --cpg
+      run: .\sl analyze --app netfwWebapi --tag branch=$Env:GITHUB_REF --csharp --cpg netfwWebapi/netfwWebapi.sln
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
